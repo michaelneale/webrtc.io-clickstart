@@ -7,7 +7,14 @@ Jenkins runs tests via npm.
 package.json is used to specify what packages are needed - main.js is the default server app
 (you can set main_js via bees config:set to override it to something else)
 
+Sample: http://webrtc-io-demo.ws.cloudbe.es
+
 <a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/danielkutik/webrtc.io-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
+
+# Know Issues
+Right now the nginx which is used for your default app url is not supporting web socket connections.
+A custom domain name alias has to be added manually to the application configuration: <your-app-name>.webrtc-io-demo.ws.cloudbe.es
+This issue should be fixed soon.
 
 # To run manually locally
 
