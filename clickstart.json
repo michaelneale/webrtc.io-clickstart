@@ -10,20 +10,7 @@
             "runtime.PLUGIN.SRC.nodejs": "https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip"
         }    
     },
-    
-    "services" : [
-    	{
-    	 "name" : "saucelabs",
-    	 "plan" : "individual",
-    	 "settings" : {}
-    	},
-    	{
-    	 "name" : "cloudant",
-    	 "plan" : "oxygen",
-    	 "settings" : {}
-    	}    	
-     ],
-    
+
     "build-with-jenkins": {
 	"template": {
             "type": "https://raw.github.com/danielkutik/webrtc.io-clickstart/master/jenkins.xml",
