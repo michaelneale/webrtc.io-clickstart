@@ -13,9 +13,9 @@ package.json is used to specify what packages are needed - main.js is the defaul
 
 0. Install Node.js
 1. Clone this repo
-2. `cd app`
-2. `npm install -d`
-3. `node main.js`
+2. cd app
+2. npm install -d
+3. node main.js
 
 # To deploy manually to CloudBees
 

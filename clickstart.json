@@ -1,22 +1,32 @@
 {
-    "id": "webrtc.io-clickstart",
-    "name": "Node.js web server",
+    "id": "webrtc-io-clickstart",
+    "name": "WebRTC.io Node.js web application",
     "source": "github",
-    "description" : "Deploy a node.js application on CloudBees with continuous deployment (beta)",
-    "icon" : "https://d3ko533tu1ozfq.cloudfront.net/clickstart/nodejs_large.png",    
-
-    "supported-by" : "community",
-    "order" : 2,
-
+    "description" : "This is a WebRTC.io Node.js application on CloudBees with continuous deployment (beta)",
+    "icon" : "https://d3ko533tu1ozfq.cloudfront.net/clickstart/nodejs.png",
     "runtime": {
         "type": "nodejs",
          "app-parameters" : { 
-            "runtime.PLUGIN.SRC.nodejs": "https://s3.amazonaws.com/clickstacks/admin/nodejs-plugin-0.8.16.zip"
+            "runtime.PLUGIN.SRC.nodejs": "https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip"
         }    
     },
+    
+    "services" : [
+    	{
+    	 "name" : "saucelabs",
+    	 "plan" : "individual",
+    	 "settings" : {}
+    	},
+    	{
+    	 "name" : "cloudant",
+    	 "plan" : "oxygen",
+    	 "settings" : {}
+    	}    	
+     ],
+    
     "build-with-jenkins": {
 	"template": {
-            "type": "https://raw.github.com/CloudBees-community/nodejs-clickstart/master/jenkins.xml",
+            "type": "https://raw.github.com/danielkutik/webrtc.io-clickstart/master/jenkins.xml",
             "options": {
             }            
         }
