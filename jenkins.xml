@@ -74,13 +74,13 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-node_version=v0.8.14
+node_version=v0.8.16
 
-file_name=nodejs-0.8.15-1.zip
+file_name=node-$node_version-linux-x64
 
 if [ ! -e $file_name ]
 then
-    wget https://cloudbees-clickstack.s3.amazonaws.com/deps/$file_name.tar.gz
+    wget http://nodejs.org/dist/$node_version/$file_name.tar.gz
     tar xf $file_name.tar.gz
 fi
 rm -rf target
