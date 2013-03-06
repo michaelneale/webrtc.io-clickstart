@@ -1,10 +1,11 @@
-var app = require('express')()
-var server = server = require('http').createServer(app);
+var app = require('express')();
+var server = require('http').createServer(app);
 var webRTC = require('webrtc.io').listen(server);
 
-server.listen(process.env.PORT);
+var port = process.env.PORT | 8080;
+server.listen(port);
 
-console.log('Starting app on port ' + process.env.PORT);
+console.log('Starting app on port ' + port);
 
 app.get('/', function(req, res) {
   res.sendfile(__dirname + '/index.html');
@@ -18,6 +19,9 @@ app.get('/webrtc.io.js', function(req, res) {
   res.sendfile(__dirname + '/webrtc.io.js');
 });
 
+app.get('/client.js', function(req, res) {
+  res.sendfile(__dirname + '/client.js');
+});
 
 webRTC.rtc.on('connect', function(rtc) {
   //Client connected
