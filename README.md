@@ -1,8 +1,12 @@
+# webrtc
+WebRTC is a realtime standard for HTML5 (supported by a variety of modern browsers). This demo uses websockets, on cloudbees, to set up your own html5 based video/voice and text chat.
+
 #  webrtc.io clickstart
 
 This clickstart is based on the <a href="https://github.com/webRTC/webrtc.io-demo">webrtc.io-demo</a> and the <a href="https://github.com/michaelneale/nodejs-clickstart">Node.js Clickstart</a>.
 The Node.js app runs on CloudBees with continuous deployment.
-Jenkins runs tests via npm. 
+
+Jenkins runs tests via npm and deploys. 
 
 package.json is used to specify what packages are needed - main.js is the default server app
 (you can set main_js via bees config:set to override it to something else)
