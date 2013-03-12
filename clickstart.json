@@ -7,13 +7,14 @@
     "runtime": {
         "type": "nodejs",
          "app-parameters" : { 
-            "runtime.PLUGIN.SRC.nodejs": "https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip"
+            "runtime.PLUGIN.SRC.nodejs": "https://s3.amazonaws.com/clickstacks/admin/nodejs-plugin-0.8.21.zip",
+            "http_version" : "1.1"
         }    
     },
 
     "build-with-jenkins": {
 	"template": {
-            "type": "https://raw.github.com/danielkutik/webrtc.io-clickstart/master/jenkins.xml",
+            "type": "https://raw.github.com/michaelneale/webrtc.io-clickstart/master/jenkins.xml",
             "options": {
             }            
         }
