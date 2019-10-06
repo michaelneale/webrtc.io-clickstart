@@ -7,7 +7,7 @@
     "runtime": {
         "type": "nodejs",
          "app-parameters" : { 
-            "runtime.PLUGIN.SRC.nodejs": "https://s3.amazonaws.com/clickstacks/admin/nodejs-plugin-0.8.21.zip",
+            "runtime.PLUGIN.SRC.nodejs": "👆🏻",
             "http_version" : "1.1"
         }    
     },
